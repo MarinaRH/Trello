@@ -1,7 +1,7 @@
 *{
     padding: 0;
     border: 0;
-    color: white;
+    color: rgb(172, 57, 57);
 }
 
 body.fondo {
@@ -27,9 +27,10 @@ header {
 
 .tab {
 background: rgba(21, 105, 194, 0.39);
-margin:5px 0;
+margin:4px 0;
 margin-left:10px; 
-padding-left: 7px;
+margin-right: 9px;
+padding-left: 5px;
 box-sizing: border-box;
 
 }
@@ -80,4 +81,39 @@ img.logo-center {
 .search  {
     background: rgba(21, 105, 194, 0.39);
   
+}
+
+/* ----------------------------------------------------------- */
+
+.list{
+    background: rgba(42, 75, 185, 0.438);
+    height: 80px;
+    width: 250px;
+    margin: 14px 0 28px 21px;
+    display: block;
+    /* overflow-wrap: break-word; */
+}
+
+button {
+    position: relative;
+    float:right;
+    border-radius: 3px;
+    padding: 7px;
+    background:rgba(0, 0, 255, 0.521);
+}
+
+.item {
+    background: rgba(38, 0, 255, 0.5);
+  
+}
+
+.title{
+    background: red;
+    display: block;
+
+}
+
+.task {
+    background: yellow;
+    
 }
