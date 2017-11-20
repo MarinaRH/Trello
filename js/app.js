@@ -1,44 +1,40 @@
 var myLists = [
     {
-      title: 'titulo lista 1',
+      title: 'Lista 1',
       tasks: [
-        'tasks: A',
-        'tasks: B',
-        'tasks: C',
-        'tasks: D'
+        'tasks A',
+        'tasks B'
       ]
     }
-  ]
-  var addListBtn = document.getElementById('add-list-button');
-  var listItems = document.getElementById('list-items');
-  var input = document.getElementsByName('list-title')[0];
-  var createItemHTML = function(listItem){
+]
 
-    var item = document.createElement('div');
-    item.classList.add('item');
+var addListBtn = document.getElementById('add-list-button');
+var listItems = document.getElementById('list-items');
+var input = document.getElementsByName('list-title')[0];
 
-    // title
-    var titleElement = document.createElement('p');
-    titleElement.classList.add('title');
-    titleElement.innerHTML = listItem.title
-    // end title
+//funcion para craar nuevas listas
+var createItemHTML = function(listItem){
+  var item = document.createElement('div');
+  item.classList.add('item');
+  item.classList.add('red');
+  // title
+  var titleElement = document.createElement('p');
+  titleElement.classList.add('title');
+  titleElement.innerHTML = listItem.title;
 
-    // tasks list
-    var tasksElement = document.createElement('div');
-    tasksElement.classList.add('tasks');
+  // crear lista de tareas
+  var tasksElement = document.createElement('div');
     for(var i = 0; i < listItem.tasks.length; i++){
       var task = document.createElement('p');
       task.innerHTML = listItem.tasks[i];
       tasksElement.appendChild(task);
     }
-    // end tasks list
-
-    // agregar tasks
+  // agregar tareas
     var taskInput = document.createElement('input');
     var addTaskButton = document.createElement('button');
-    addTaskButton.setAttribute('id', 'add-task-button');
+    addTaskButton.setAttribute('id','add-task-button');
     addTaskButton.innerHTML = 'Add Task';
-    // end agregar tasks
+    taskInput.setAttribute('placeholder','ingresa tarea...');
 
     item.appendChild(titleElement);
     item.appendChild(tasksElement);
@@ -46,41 +42,47 @@ var myLists = [
     item.appendChild(addTaskButton);
 
     addTaskButton.addEventListener('click', function(e){
-      listItem.tasks.push(taskInput.value); // objecto
+      listItem.tasks.push(taskInput.value); //agregando al  objecto
       var newTask = document.createElement('p');
       newTask.innerHTML = taskInput.value;
       tasksElement.appendChild(newTask); // agregando al html
+
+      taskInput.value = '';
+      taskInput.focus();
     });
 
-    return item;
-  }
+  return item;
+}
 
-  var createNewList = function(title) {
-    return {
-      title: title,
-      tasks: []
-    }
+var createNewList = function(title) {
+  return {
+    title: title,
+    tasks: []
   }
+}
 
-  var addList = function(newList) {
-    myLists.push(newList); // objeto
+var addList = function(newList) {
+    myLists.push(newList); // agregar al objeto
     listItems.appendChild(createItemHTML(newList)) // agregar a el HTML
-  }
+}
 
-  var addNewList = function(e){
+var addNewList = function(e){
     e.preventDefault();
     var title = input.value;
-    if(title === '') return;
+    if(title === '')
+    return;
     var newList = createNewList(title)
-    addList(newList)
+    addList(newList);
+    input.value = '';
+    input.focus();
+}
+
+//agregar las nuevas listas
+var initialize = function(){
+  for(var i = 0; i < myLists.length; i++){
+     listItems.appendChild(createItemHTML(myLists[i]))
   }
+}
 
-  var initialize = function(){
-    for(var i = 0; i < myLists.length; i++){
-      listItems.appendChild(createItemHTML(myLists[i]))
-    }
-  }
-
-  addListBtn.addEventListener('click', addNewList)
-
-  initialize();
+addListBtn.addEventListener('click', addNewList);
+initialize();

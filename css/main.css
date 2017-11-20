@@ -1,7 +1,10 @@
 *{
     padding: 0;
     border: 0;
-    color: rgb(172, 57, 57);
+    color: rgb(253, 251, 251);
+    font-size:17px; 
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 body.fondo {
@@ -10,87 +13,90 @@ body.fondo {
     background-repeat: no-repeat;
     margin: 0;
 }
+
 header {
      height: 58px;
-    background:rgba(0, 0, 255, 0.342);
+     background:rgba(0, 38, 255, 0.384);
+}
+/* estilos reutilizables */
+.block{
+     display: inline-block;
+     /* background: rgba(21, 110, 194, 0.493); */
 }
 
-.block{
-    display: inline-block;
-   }
 .logo {
-    background: rgba(21, 105, 194, 0.39);
+    /* background: rgba(21, 110, 194, 0.904); */
     margin: 3px 5px;
     border-radius: 4px;
-    padding: 3px;
+    padding: 2px;
 }
 
 .tab {
-background: rgba(21, 105, 194, 0.39);
-margin:4px 0;
-margin-left:10px; 
-margin-right: 9px;
-padding-left: 5px;
-box-sizing: border-box;
-
+     background: rgba(21, 47, 194, 0.459);
+     margin:4px 0;
+     margin-left:10px; 
+     margin-right: 9px;
+     padding-left: 4px;
+     box-sizing: border-box;
+     border-radius:5px;
 }
 
-ul {
-   list-style: none;
-   text-decoration:none;
-   color:white;
-   margin: 0;
-   
-
+.icono {
+    font-size:21px;
+    text-align: center; 
+    padding:7px; 
 }
-
-li {
-    background: rgba(21, 105, 194, 0.616);
-    display: inline-block;
-}
- .icono {
-     font-size:25px;
-     text-align: center; 
-     padding:7px; 
- }
-
- .perfil {
-     border-radius: 50px;
-     background: rgba(21, 105, 194, 0.39);
-     padding: 10px;
-     margin-right: 10px;
- }
-.border{
-    background: transparent;
-    border-radius: 4px;
-    height: 45px;
-}
-
-
-img.logo-center {
-    width:84px;
-    position: relative;
-    left: 300px;
-}
-
 
 .icons {
     float: right;
 }
 
 .search  {
-    background: rgba(21, 105, 194, 0.39);
-  
+    padding: 1px 9px;
+    background:rgba(0, 0, 255, 0.26) ;
+}
+/* estilos para el nav */
+ul {
+    list-style: none;
+    text-decoration:none;
+    color:white;
+    margin: 0;  
 }
 
-/* ----------------------------------------------------------- */
+li {
+    background: rgba(21, 105, 194, 0.616);
+    display: inline-block;
+}
 
+.perfil {
+     border-radius: 50px;
+     background: rgba(21, 105, 194, 0.39);
+     padding: 14px;
+     margin-right: 18px;
+     margin-top: 7px;
+}
+
+.border{
+    border-radius: 4px;
+    height: 45px;
+}
+
+img.logo-center {
+    width:84px;
+    position: relative;
+    left: 250px;
+    top: 7px;
+}
+
+
+/* estilos para listas y tareas creadas */
 .list{
     background: rgba(42, 75, 185, 0.438);
-    height: 80px;
+    height: 100px;
     width: 250px;
-    margin: 14px 0 28px 21px;
-    display: block;
+    margin: 23px 0 70px 21px;
+    display:block;
+    box-sizing: border-box;
     /* overflow-wrap: break-word; */
 }
 
@@ -99,21 +105,39 @@ button {
     float:right;
     border-radius: 3px;
     padding: 7px;
-    background:rgba(0, 0, 255, 0.521);
+    background:rgba(23, 61, 230, 0.582);
+}
+input {
+     background: rgba(18, 18, 245, 0.397);
+     width: 250px;
+     height: 22px;
+     border-radius: 5px;
+}
+
+label {
+    background: rgba(0, 153, 255, 0.466);
+    display: block;
+    box-sizing: border-box;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 11px;
 }
 
 .item {
-    background: rgba(38, 0, 255, 0.5);
-  
+    background: rgba(34, 0, 255, 0.322);
 }
 
 .title{
-    background: red;
-    display: block;
+    background: rgba(62, 167, 238, 0.514);
+    display:block;
+    padding: 7px 0;
+    margin:14px;
+    font-size: 17px;
+    border-radius: 5px;
 
 }
 
-.task {
-    background: yellow;
-    
+.red{
+    margin-bottom: 42px;
+    display: inline-block;
 }
