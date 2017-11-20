@@ -1,6 +1,6 @@
 var myLists = [
     {
-      title: 'Lista 1',
+      title: 'List 1',
       tasks: [
         'tasks A',
         'tasks B'

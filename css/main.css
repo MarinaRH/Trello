@@ -33,12 +33,13 @@ header {
 
 .tab {
      background: rgba(21, 47, 194, 0.459);
-     margin:4px 0;
+     margin:5px 0;
      margin-left:10px; 
      margin-right: 9px;
-     padding-left: 4px;
+     padding-left: 2px;
      box-sizing: border-box;
      border-radius:5px;
+     height: 47px;
 }
 
 .icono {
@@ -53,7 +54,7 @@ header {
 
 .search  {
     padding: 1px 9px;
-    background:rgba(0, 0, 255, 0.26) ;
+    background:rgba(16, 61, 175, 0.315) ;
 }
 /* estilos para el nav */
 ul {
@@ -78,7 +79,7 @@ li {
 
 .border{
     border-radius: 4px;
-    height: 45px;
+    height: 46px;
 }
 
 img.logo-center {
@@ -92,9 +93,9 @@ img.logo-center {
 /* estilos para listas y tareas creadas */
 .list{
     background: rgba(42, 75, 185, 0.438);
-    height: 100px;
+    height: 115px;
     width: 250px;
-    margin: 23px 0 70px 21px;
+    margin: 23px 0 28px 21px;
     display:block;
     box-sizing: border-box;
     /* overflow-wrap: break-word; */
@@ -108,10 +109,12 @@ button {
     background:rgba(23, 61, 230, 0.582);
 }
 input {
-     background: rgba(18, 18, 245, 0.397);
-     width: 250px;
-     height: 22px;
+     background: transparent;
+     width: 230px;
+     height: 28px;
      border-radius: 5px;
+     margin: 4px 11px;
+     box-sizing: border-box;
 }
 
 label {
@@ -120,7 +123,7 @@ label {
     box-sizing: border-box;
     padding: 7px;
     border-radius: 5px;
-    margin: 11px;
+    margin: 11px 0;
 }
 
 .item {
@@ -131,9 +134,9 @@ label {
     background: rgba(62, 167, 238, 0.514);
     display:block;
     padding: 7px 0;
-    margin:14px;
-    font-size: 17px;
     border-radius: 5px;
+    position: relative;
+    bottom:16px;
 
 }
 
